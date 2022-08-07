@@ -1,6 +1,7 @@
 package com.minhao.springbootmall.controller;
 
 import com.minhao.springbootmall.constant.ProductCategory;
+import com.minhao.springbootmall.dto.ProductQueryParams;
 import com.minhao.springbootmall.dto.ProductRequest;
 import com.minhao.springbootmall.model.Product;
 import com.minhao.springbootmall.service.ProductService;
@@ -23,7 +24,11 @@ public class ProductController {
             @RequestParam(required = false) ProductCategory category,
             @RequestParam(required = false) String search) { // required 設為 false，在 url 請求時少了此參數，也可以順利運行，並且值為 null
 
-        List<Product> productList = productService.getProducts(category, search);
+        ProductQueryParams productQueryParams = new ProductQueryParams();
+        productQueryParams.setCategory(category);
+        productQueryParams.setSearch(search);
+
+        List<Product> productList = productService.getProducts(productQueryParams);
 
         return ResponseEntity.status(HttpStatus.OK).body(productList);
     }
