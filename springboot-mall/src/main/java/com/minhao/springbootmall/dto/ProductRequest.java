@@ -1,46 +1,34 @@
-package com.minhao.springbootmall.model;
+package com.minhao.springbootmall.dto;
 
 import com.minhao.springbootmall.constant.ProductCategory;
 
 import javax.persistence.Column;
-import java.util.Date;
+import javax.validation.constraints.NotNull;
 
-public class Product {
+public class ProductRequest {
 
-    @Column(name = "productId")
-    private Integer productId;
-
-    @Column(name = "productName")
+    @NotNull
+    @Column(name = "product_name")
     private String productName;
 
+    @NotNull
     @Column(name = "category")
     private ProductCategory category;
 
-    @Column(name = "imageUrl")
+    @NotNull
+    @Column(name = "image_url")
     private String imageUrl;
 
+    @NotNull
     @Column(name = "price")
     private Integer price;
 
+    @NotNull
     @Column(name = "stock")
     private Integer stock;
 
     @Column(name = "description")
     private String description;
-
-    @Column(name = "createdDate")
-    private Date createdDate;
-
-    @Column(name = "lastModifiedDate")
-    private Date lastModifiedDate;
-
-    public Integer getProductId() {
-        return productId;
-    }
-
-    public void setProductId(Integer productId) {
-        this.productId = productId;
-    }
 
     public String getProductName() {
         return productName;
@@ -88,21 +76,5 @@ public class Product {
 
     public void setDescription(String description) {
         this.description = description;
-    }
-
-    public Date getCreatedDate() {
-        return createdDate;
-    }
-
-    public void setCreatedDate(Date createdDate) {
-        this.createdDate = createdDate;
-    }
-
-    public Date getLastModifiedDate() {
-        return lastModifiedDate;
-    }
-
-    public void setLastModifiedDate(Date lastModifiedDate) {
-        this.lastModifiedDate = lastModifiedDate;
     }
 }
