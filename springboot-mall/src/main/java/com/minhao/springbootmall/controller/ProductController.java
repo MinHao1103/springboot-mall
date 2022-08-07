@@ -1,5 +1,6 @@
 package com.minhao.springbootmall.controller;
 
+import com.minhao.springbootmall.constant.ProductCategory;
 import com.minhao.springbootmall.dto.ProductRequest;
 import com.minhao.springbootmall.model.Product;
 import com.minhao.springbootmall.service.ProductService;
@@ -18,9 +19,11 @@ public class ProductController {
     private ProductService productService;
 
     @GetMapping("/products")
-    public ResponseEntity<List<Product>> getProducts(){
+    public ResponseEntity<List<Product>> getProducts(
+            @RequestParam(required = false) ProductCategory category,
+            @RequestParam(required = false) String search) { // required 設為 false，在 url 請求時少了此參數，也可以順利運行，並且值為 null
 
-        List<Product> productList = productService.getProducts();
+        List<Product> productList = productService.getProducts(category, search);
 
         return ResponseEntity.status(HttpStatus.OK).body(productList);
     }
@@ -65,7 +68,7 @@ public class ProductController {
     }
 
     @DeleteMapping("/products/{productId}")
-    public ResponseEntity<?> deleteProduct(@PathVariable Integer productId){
+    public ResponseEntity<?> deleteProduct(@PathVariable Integer productId) {
 
         productService.deleteProductById(productId);
 
