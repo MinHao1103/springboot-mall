@@ -6,7 +6,6 @@ import javax.persistence.Column;
 import javax.validation.constraints.NotNull;
 
 public class ProductRequest {
-
     @NotNull
     @Column(name = "product_name")
     private String productName;

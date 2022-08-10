@@ -1,6 +1,5 @@
 package com.minhao.springbootmall.dao.impl;
 
-import com.minhao.springbootmall.constant.ProductCategory;
 import com.minhao.springbootmall.dao.ProductDao;
 import com.minhao.springbootmall.dto.ProductQueryParams;
 import com.minhao.springbootmall.dto.ProductRequest;
@@ -57,9 +56,7 @@ public class ProductDaoImpl implements ProductDao {
         map.put("limit", productQueryParams.getLimit());
         map.put("offset", productQueryParams.getOffset());
 
-        List<Product> productList = namedParameterJdbcTemplate.query(sql, map, new ProductRowMapper());
-
-        return productList;
+        return namedParameterJdbcTemplate.query(sql, map, new ProductRowMapper());
     }
 
     @Override
