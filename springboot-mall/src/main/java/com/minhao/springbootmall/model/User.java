@@ -1,5 +1,7 @@
 package com.minhao.springbootmall.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import javax.persistence.Column;
 import java.util.Date;
 
@@ -12,7 +14,8 @@ public class User {
     private String email;
 
     @Column(name = "password")
-    private String password;
+    @JsonIgnore
+    private String password; // @JsonIgnore：隱藏密碼值，避免回傳給前端
 
     @Column(name = "created_date")
     private Date createdDate;
