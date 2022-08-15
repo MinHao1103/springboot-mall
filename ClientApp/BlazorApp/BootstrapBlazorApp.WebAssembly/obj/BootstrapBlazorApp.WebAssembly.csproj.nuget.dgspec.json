@@ -1,0 +1,146 @@
+{
+  "format": 1,
+  "restore": {
+    "/Users/shannick/springboot-mall/ClientApp/BlazorApp/BootstrapBlazorApp.WebAssembly/BootstrapBlazorApp.WebAssembly.csproj": {}
+  },
+  "projects": {
+    "/Users/shannick/springboot-mall/ClientApp/BlazorApp/BootstrapBlazorApp.Shared/BootstrapBlazorApp.Shared.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/shannick/springboot-mall/ClientApp/BlazorApp/BootstrapBlazorApp.Shared/BootstrapBlazorApp.Shared.csproj",
+        "projectName": "BootstrapBlazorApp.Shared",
+        "projectPath": "/Users/shannick/springboot-mall/ClientApp/BlazorApp/BootstrapBlazorApp.Shared/BootstrapBlazorApp.Shared.csproj",
+        "packagesPath": "/Users/shannick/.nuget/packages/",
+        "outputPath": "/Users/shannick/springboot-mall/ClientApp/BlazorApp/BootstrapBlazorApp.Shared/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/shannick/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "BootstrapBlazor": {
+              "target": "Package",
+              "version": "[6.*, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/6.0.400/RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/Users/shannick/springboot-mall/ClientApp/BlazorApp/BootstrapBlazorApp.WebAssembly/BootstrapBlazorApp.WebAssembly.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/shannick/springboot-mall/ClientApp/BlazorApp/BootstrapBlazorApp.WebAssembly/BootstrapBlazorApp.WebAssembly.csproj",
+        "projectName": "BootstrapBlazorApp.WebAssembly",
+        "projectPath": "/Users/shannick/springboot-mall/ClientApp/BlazorApp/BootstrapBlazorApp.WebAssembly/BootstrapBlazorApp.WebAssembly.csproj",
+        "packagesPath": "/Users/shannick/.nuget/packages/",
+        "outputPath": "/Users/shannick/springboot-mall/ClientApp/BlazorApp/BootstrapBlazorApp.WebAssembly/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/shannick/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "/Users/shannick/springboot-mall/ClientApp/BlazorApp/BootstrapBlazorApp.Shared/BootstrapBlazorApp.Shared.csproj": {
+                "projectPath": "/Users/shannick/springboot-mall/ClientApp/BlazorApp/BootstrapBlazorApp.Shared/BootstrapBlazorApp.Shared.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "Microsoft.AspNetCore.Components.WebAssembly": {
+              "target": "Package",
+              "version": "[6.*, )"
+            },
+            "Microsoft.AspNetCore.Components.WebAssembly.DevServer": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[6.*, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.NETCore.App.Runtime.Mono.browser-wasm",
+              "version": "[6.0.8, 6.0.8]"
+            }
+          ],
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/6.0.400/RuntimeIdentifierGraph.json"
+        }
+      },
+      "runtimes": {
+        "browser-wasm": {
+          "#import": []
+        }
+      }
+    }
+  }
+}
