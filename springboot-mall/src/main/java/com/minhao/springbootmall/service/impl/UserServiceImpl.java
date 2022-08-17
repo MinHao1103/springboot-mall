@@ -40,7 +40,7 @@ public class UserServiceImpl implements UserService {
         // 創建帳號
         Integer userId = userDao.createUser(userRegisterRequest);
 
-        // 使用 SHA256 生成密碼雜湊值
+        // 密碼加鹽後，再使用 SHA256 生成密碼雜湊值
         String hashedPassword = getSHA256(userRegisterRequest.getPassword(), userId);
 
         // 將雜湊後的密碼重新存進資料庫
