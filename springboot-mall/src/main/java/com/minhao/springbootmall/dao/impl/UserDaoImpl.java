@@ -79,4 +79,17 @@ public class UserDaoImpl implements UserDao {
 
         return userId;
     }
+
+    @Override
+    public Boolean updatePassword(Integer userId, String password) {
+        String sql = "UPDATE user SET password = :password WHERE user_id = :userId";
+
+        Map<String, Object> map = new HashMap<>();
+        map.put("userId", userId);
+        map.put("password", password);
+
+        namedParameterJdbcTemplate.update(sql, map);
+
+        return true;
+    }
 }

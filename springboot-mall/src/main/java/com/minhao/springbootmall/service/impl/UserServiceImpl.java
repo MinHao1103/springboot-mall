@@ -9,9 +9,10 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
-import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Component;
 import org.springframework.web.server.ResponseStatusException;
+
+import static com.minhao.springbootmall.util.Sha2.getSHA256;
 
 @Component
 public class UserServiceImpl implements UserService {
@@ -37,7 +38,19 @@ public class UserServiceImpl implements UserService {
         }
 
         // 創建帳號
-        return userDao.createUser(userRegisterRequest);
+        Integer userId = userDao.createUser(userRegisterRequest);
+
+        // 使用 SHA256 生成密碼雜湊值
+        String hashedPassword = getSHA256(userRegisterRequest.getPassword(), userId);
+
+        // 將雜湊後的密碼重新存進資料庫
+        Boolean boo = userDao.updatePassword(userId, hashedPassword);
+
+        if (boo == true) {
+            return userId;
+        } else {
+            return -1;
+        }
     }
 
     @Override
@@ -45,12 +58,17 @@ public class UserServiceImpl implements UserService {
 
         User user = userDao.getUserByEmail(userLoginRequest.getEmail());
 
+        // 檢查 User 是否存在
         if (user == null){
             log.warn("該 email {} 尚未註冊", userLoginRequest.getEmail());
             throw new ResponseStatusException(HttpStatus.BAD_REQUEST);
         }
 
-        if(user.getPassword().equals(userLoginRequest.getPassword())){
+        // 使用 SHA256 生成密碼雜湊值
+        String hashedPassword = getSHA256(userLoginRequest.getPassword(), user.getUserId());
+
+        // 比較密碼
+        if(user.getPassword().equals(hashedPassword)){
             return user;
         }else{
             log.warn("email {} 的密碼不正確", userLoginRequest.getEmail());

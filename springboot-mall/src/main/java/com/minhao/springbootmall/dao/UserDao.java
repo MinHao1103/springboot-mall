@@ -10,4 +10,6 @@ public interface UserDao {
     User getUserById(Integer userId);
 
     Integer createUser(UserRegisterRequest userRegisterRequest);
+
+    Boolean updatePassword(Integer userId, String password);
 }
