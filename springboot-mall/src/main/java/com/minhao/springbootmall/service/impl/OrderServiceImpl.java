@@ -5,6 +5,7 @@ import com.minhao.springbootmall.dao.ProductDao;
 import com.minhao.springbootmall.dao.UserDao;
 import com.minhao.springbootmall.dto.BuyItem;
 import com.minhao.springbootmall.dto.CreateOrderRequest;
+import com.minhao.springbootmall.dto.OrderQueryParams;
 import com.minhao.springbootmall.model.Order;
 import com.minhao.springbootmall.model.OrderItem;
 import com.minhao.springbootmall.model.Product;
@@ -34,6 +35,28 @@ public class OrderServiceImpl implements OrderService {
 
     @Autowired
     private UserDao userDao;
+
+    @Override
+    public Integer countOrder(OrderQueryParams orderQueryParams) {
+        return orderDao.countOrders(orderQueryParams);
+    }
+
+    @Override
+    public List<Order> getOrders(OrderQueryParams orderQueryParams) {
+
+        // 找出符合條件的訂單
+        List<Order> orderList = orderDao.getOrders(orderQueryParams);
+
+        for (Order order : orderList) {
+            // 針對每一個 Order，取得 Order Items
+            List<OrderItem> orderItemList = orderDao.getOrderItemByOrderId(order.getOrderId());
+
+            // 將每一筆 orderItemList 存在 Order
+            order.setOrderItemList(orderItemList);
+        }
+
+        return orderList;
+    }
 
     @Override
     public Order getOrderById(Integer orderId) {

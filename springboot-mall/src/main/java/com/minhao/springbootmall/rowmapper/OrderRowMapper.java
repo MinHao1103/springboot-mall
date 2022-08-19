@@ -7,7 +7,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 
 
-public class OrderMapper implements RowMapper<Order> {
+public class OrderRowMapper implements RowMapper<Order> {
 
     @Override
     public Order mapRow(ResultSet resultSet, int i) throws SQLException {
