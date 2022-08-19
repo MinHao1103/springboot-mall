@@ -10,6 +10,7 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Component;
+import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.server.ResponseStatusException;
 
 import static com.minhao.springbootmall.util.Sha2.getSHA256;
@@ -27,6 +28,7 @@ public class UserServiceImpl implements UserService {
         return userDao.getUserById(userId);
     }
 
+    @Transactional
     @Override
     public Integer register(UserRegisterRequest userRegisterRequest) {
         // 檢查註冊的 Email
