@@ -11,5 +11,6 @@
     1. Shift + Ctrl + A，輸入 Maven => Add Maven Projects
     2. 指定 springboot-mall 的 pom.xml
   * 如何啟動 Angular ?
-    1. 初始化：點擊 \webapp\initalize.bat
-    2. 啟動：點擊 \webapp\run.bat
+    1. [安裝 Node.js](https://nodejs.org/zh-tw/)
+    2. 初始化：點擊 \webapp\initalize.bat ( 只需執行一次，之後啟動不需執行 )
+    3. 啟動：點擊 \webapp\start.bat
