@@ -1,7 +1,41 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="82fcf7bf-b3b2-4578-bee5-edd24cbc593d" name="Changes" comment="" />
+    <list default="true" id="82fcf7bf-b3b2-4578-bee5-edd24cbc593d" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/webapp/.browserslistrc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webapp/.editorconfig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webapp/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webapp/.vscode/extensions.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webapp/.vscode/launch.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webapp/.vscode/tasks.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webapp/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webapp/angular.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webapp/karma.conf.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webapp/package-lock.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webapp/package.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webapp/src/app/app-routing.module.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webapp/src/app/app.component.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webapp/src/app/app.component.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webapp/src/app/app.component.spec.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webapp/src/app/app.component.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webapp/src/app/app.module.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webapp/src/assets/.gitkeep" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webapp/src/environments/environment.prod.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webapp/src/environments/environment.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webapp/src/favicon.ico" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webapp/src/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webapp/src/main.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webapp/src/polyfills.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webapp/src/styles.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webapp/src/test.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webapp/tsconfig.app.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webapp/tsconfig.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webapp/tsconfig.spec.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -10,19 +44,38 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="JpbToolWindowState">
+    <option name="myId2FirstActivated">
+      <map>
+        <entry key="com.haulmont.jpb.jpaStructure" value="true" />
+      </map>
+    </option>
+    <option name="myId2Visible">
+      <map>
+        <entry key="com.haulmont.jpb.jpaStructure" value="false" />
+      </map>
+    </option>
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
   <component name="ProjectId" id="2CtmIhiSWtrFkriTh2Pabjy8Kwa" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "settings.editor.selected.configurable": "preferences.pluginManager"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -32,10 +85,24 @@
       <option name="presentableId" value="Default" />
       <updated>1659630181390</updated>
       <workItem from="1659630189130" duration="225000" />
+      <workItem from="1665912674031" duration="1407000" />
+      <workItem from="1665917456457" duration="2548000" />
+      <workItem from="1665930282317" duration="756000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>
