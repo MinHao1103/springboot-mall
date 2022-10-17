@@ -3,5 +3,5 @@
  * 所以任何的 ts 檔皆可使用，可在此檔全域宣告
  */
 
-// 全域宣告 bootstrap，因為 TypeScript 是強行別
+// 全域宣告 bootstrap，因為 TypeScript 是強型別
 declare var bootstrap: any;
