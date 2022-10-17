@@ -1,5 +1,18 @@
-npm install
-
-# 安裝 jquery 套件
-npm i jquery
-npm i @types/jquery --save-dev
+@echo off
+echo -------------------------------------
+echo Initializing, please later.
+echo -------------------------------------
+call npm install
+echo.
+echo.
+echo -------------------------------------
+echo Installing jquery
+echo -------------------------------------
+call npm i jquery
+call npm i @types/jquery --save-dev
+echo.
+echo.
+echo -------------------------------------
+echo Successfully installed
+echo -------------------------------------
+pause
