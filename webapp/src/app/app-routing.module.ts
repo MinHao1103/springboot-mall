@@ -5,7 +5,9 @@ import { RouterModule, Routes } from '@angular/router';
 
 const routes: Routes = [
   { path: 'menu', component: MenuComponent },
-  { path: 'header', component: HeaderComponent }
+  { path: 'menu/:name', component: MenuComponent },
+  { path: 'header', component: HeaderComponent },
+  { path: 'header/:name', component: HeaderComponent }
 ];
 
 @NgModule({
