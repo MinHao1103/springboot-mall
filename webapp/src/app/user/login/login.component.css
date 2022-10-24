@@ -115,7 +115,7 @@ body {
   border-color: #358efb;
 }
 
-.u-form-group button {
+#inputButton {
   width: 50%;
   background-color: #1CB94E;
   border: none;
