@@ -16,18 +16,18 @@ export class LoginComponent implements OnInit {
 
   ngOnInit(): void { }
 
-  /** 從後端取得資料 */
+  // 登入
   getUserLogin() {
-
     let dataJSON = {
-      // action: "selectAddress",
+      "email": "test01@gmail.com",
+      "password": "test01"
     }
 
     $.ajax({
-      type: "GET",
+      type: "Post",
       async: false,
-      url: "http://localhost:8080/products",
-      data: dataJSON,
+      url: "http://localhost:8080/users/login",
+      data: JSON.stringify(dataJSON),
       contentType: "application/json; charset=UTF-8",
       dataType: 'json',
       statusCode: { // 依不同StatusCode執行不同邏輯
@@ -44,7 +44,7 @@ export class LoginComponent implements OnInit {
     });
   }
 
-
+  // Login 與 Sign Up 的 Button
   clickState(str: any) {
     if (str === 'signUp') {
       $(".email-login").fadeOut(100);
