@@ -4,6 +4,7 @@
 * MySQL 版本：8.0.22
 * 單元測試：H2 Database、JUnit
 * IntelliJ 版本：2022.1.2
+* Visual Studio Code 版本：1.72.2
 * Dao 層使用 SpringJDBC
 ---
 * 開發環境建置說明 ( IDEA )
