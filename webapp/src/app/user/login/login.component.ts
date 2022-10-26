@@ -19,8 +19,8 @@ export class LoginComponent implements OnInit {
   // 登入
   getUserLogin() {
     let dataJSON = {
-      "email": "test01@gmail.com",
-      "password": "test01"
+      "email": $("#loginEmail").val(),
+      "password": $("#loginPassword").val()
     }
 
     $.ajax({
@@ -33,6 +33,7 @@ export class LoginComponent implements OnInit {
       statusCode: { // 依不同StatusCode執行不同邏輯
         200: function (data) {
           console.table(data);
+          alert("登入成功");
         },
         404: function () {
           alert("Page Not Found!");
