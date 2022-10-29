@@ -6,6 +6,7 @@ import { ActivatedRoute } from '@angular/router';                 // (1)
   templateUrl: './menu.component.html',
   styleUrls: ['./menu.component.css']
 })
+
 export class MenuComponent implements OnInit {
 
   name!: string | null;                                           // (2)
@@ -15,5 +16,4 @@ export class MenuComponent implements OnInit {
     this.name = this.route.snapshot.paramMap.get('name')          // (4)
 
   }
-
 }
