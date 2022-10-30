@@ -34,6 +34,8 @@ export class LoginComponent implements OnInit {
         200: function (data) {
           console.table(data);
           alert("登入成功");
+          window.sessionStorage.setItem("userId", data.userId);
+          window.location.assign("http://localhost:4200/home");
         },
         404: function () {
           alert("Page Not Found!");
