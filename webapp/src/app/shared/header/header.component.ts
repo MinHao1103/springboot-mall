@@ -1,5 +1,5 @@
+import { Router } from '@angular/router';
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';                 // (1)
 
 @Component({
   selector: 'app-header',
@@ -8,11 +8,14 @@ import { ActivatedRoute } from '@angular/router';                 // (1)
 })
 export class HeaderComponent implements OnInit {
 
-  name!: string | null;                                           // (2)
-  constructor(private route: ActivatedRoute,) { }                 // (3)
+  constructor(private router: Router) { }
 
-  ngOnInit(): void {
-    this.name = this.route.snapshot.paramMap.get('name')          // (4)
+  ngOnInit(): void { }
+
+  logOut() {
+    sessionStorage.removeItem("userId");
+    sessionStorage.removeItem("mail");
+    this.router.navigateByUrl('login');
   }
 
 }

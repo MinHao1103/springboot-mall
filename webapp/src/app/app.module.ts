@@ -11,13 +11,17 @@ import { HeaderComponent } from './shared/header/header.component';
 // User
 import { LoginComponent } from './user/login/login.component';
 
+// Home
+import { HomeComponent } from './home/home/home.component';
+
 
 @NgModule({
   declarations: [
     AppComponent,
     MenuComponent,
     HeaderComponent,
-    LoginComponent
+    LoginComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
