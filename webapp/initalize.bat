@@ -19,6 +19,13 @@ call npm install -g json-server
 echo.
 echo.
 echo -------------------------------------
+echo Installing Google OAuth 2.0
+echo -------------------------------------
+cd..
+call npm i angularx-social-login
+echo.
+echo.
+echo -------------------------------------
 echo Successfully installed
 echo -------------------------------------
 pause
