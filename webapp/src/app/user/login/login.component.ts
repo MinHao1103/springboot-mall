@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-login',
@@ -29,9 +30,18 @@ export class LoginComponent implements OnInit {
       dataType: 'json',
       statusCode: { // 依不同StatusCode執行不同邏輯
         200: function (userInfo) {
-          alert("登入成功");
-          window.sessionStorage.setItem("userInfo", JSON.stringify(userInfo));
-          window.location.assign("http://localhost:4200/home");
+          Swal.fire({
+            icon: 'success',
+            title: '登入成功',
+            showConfirmButton: false,
+            timer: 1500
+          })
+
+          function inToHome() {
+            window.sessionStorage.setItem("userInfo", JSON.stringify(userInfo));
+            window.location.assign("http://localhost:4200/home");
+          }
+          setTimeout(inToHome, 1000);
         },
         404: function () {
           alert("Page Not Found!");

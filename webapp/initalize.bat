@@ -19,6 +19,12 @@ call npm install -g json-server
 echo.
 echo.
 echo -------------------------------------
+echo Installing Sweetalert2
+echo -------------------------------------
+call npm i sweetalert2
+echo.
+echo.
+echo -------------------------------------
 echo Installing Google OAuth 2.0
 echo -------------------------------------
 cd..
