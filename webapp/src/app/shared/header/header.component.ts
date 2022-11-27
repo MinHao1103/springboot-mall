@@ -17,4 +17,14 @@ export class HeaderComponent implements OnInit {
     this.router.navigateByUrl('login');
   }
 
+  // 進入會員中心
+  inToUserCenter() {
+    const userJson = sessionStorage.getItem('userInfo');
+    if (userJson === null) {
+      alert('請先登入');
+      this.router.navigateByUrl('login');
+    } else {
+      this.router.navigateByUrl('userCenter');
+    }
+  }
 }

@@ -13,6 +13,7 @@ import { LoginComponent } from './user/login/login.component';
 
 // Home
 import { HomeComponent } from './home/home/home.component';
+import { UserCenterComponent } from './user/userCenter/user-center/user-center.component';
 
 
 @NgModule({
@@ -21,7 +22,8 @@ import { HomeComponent } from './home/home/home.component';
     MenuComponent,
     HeaderComponent,
     LoginComponent,
-    HomeComponent
+    HomeComponent,
+    UserCenterComponent
   ],
   imports: [
     BrowserModule,
