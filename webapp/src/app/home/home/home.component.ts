@@ -10,6 +10,12 @@ export class HomeComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
-    console.log(window.sessionStorage.getItem("userId"));
+
+    const userJson = sessionStorage.getItem('userInfo');
+    let jsonUser = JSON.parse(userJson || '{}');
+    console.log(jsonUser)
+    console.log(jsonUser.userId)
+    console.log(jsonUser.email)
+
   }
 }

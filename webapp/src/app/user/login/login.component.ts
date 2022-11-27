@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { User } from './data/user-data';
 
 @Component({
   selector: 'app-login',
@@ -9,8 +8,6 @@ import { User } from './data/user-data';
 })
 
 export class LoginComponent implements OnInit {
-
-  hello: string | undefined;
 
   constructor(private http: HttpClient) { }
 
@@ -31,10 +28,9 @@ export class LoginComponent implements OnInit {
       contentType: "application/json; charset=UTF-8",
       dataType: 'json',
       statusCode: { // 依不同StatusCode執行不同邏輯
-        200: function (data) {
-          console.table(data);
+        200: function (userInfo) {
           alert("登入成功");
-          window.sessionStorage.setItem("userId", data.userId);
+          window.sessionStorage.setItem("userInfo", JSON.stringify(userInfo));
           window.location.assign("http://localhost:4200/home");
         },
         404: function () {
