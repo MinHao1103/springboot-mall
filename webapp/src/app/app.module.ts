@@ -10,10 +10,10 @@ import { HeaderComponent } from './shared/header/header.component';
 
 // User
 import { LoginComponent } from './user/login/login.component';
+import { UserCenterComponent } from './user/userCenter/user-center/user-center.component';
 
 // Home
 import { HomeComponent } from './home/home/home.component';
-import { UserCenterComponent } from './user/userCenter/user-center/user-center.component';
 
 
 @NgModule({
